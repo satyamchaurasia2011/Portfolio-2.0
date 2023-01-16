@@ -30,7 +30,7 @@ export default function Home({ pageInfo, experiences, projects, skills, socials 
     scrollbar-thumb-[#0af7ef]/80 "
     >
       <Head>
-        <title>Portfolio</title>
+        <title>Satyam Chaurasia</title>
       </Head>
 
       {/* Header */}
