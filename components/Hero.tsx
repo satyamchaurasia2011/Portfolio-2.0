@@ -23,15 +23,15 @@ export default function Hero({ pageInfo }: Props) {
     <div className="h-screen flex flex-col justify-center items-center text-center overflow-hidden space-y-8">
       <BackgroundCircles />
       <img
-        className="relative rounded-full w-32 h-32 object-cover mx-auto"
+        className="relative rounded-full w-24 h-24 md:w-32 md:h-32 object-cover mx-auto"
         src={urlFor(pageInfo?.image).url()}
         alt="profile"
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-4 tracking-[15px]">
+        <h2 className="text-sm uppercase text-gray-500 pb-4 tracking-[8px] md:tracking-[15px]">
           {pageInfo.role}
         </h2>
-        <h1 className="text-5xl lg:6xl font-semibold px-10">
+        <h1 className="text-lg md:text-5xl lg:6xl font-semibold px-10">
           <span className="mr-3"> {text}</span>
           <Cursor cursorColor="#0af7ef" />
         </h1>

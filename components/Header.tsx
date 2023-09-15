@@ -9,10 +9,10 @@ type Props = {
 
 export default function Header({ socials }: Props) {
   return (
-    <header className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto p-5 z-20 xl:items-center">
+    <header className="sticky top-0 flex items-start justify-center md:justify-between max-w-7xl mx-auto p-5 z-20 xl:items-center">
       <motion.div
         initial={{
-          opacity: 0,
+          opacity: 0, 
           x: -500,
           scale: 0.5,
         }}
@@ -22,7 +22,7 @@ export default function Header({ socials }: Props) {
           scale: 1,
         }}
         transition={{ duration: 1.5 }}
-        className="flex flex-row items-center"
+        className="flex flex-row items-center "
       >
         {socials.map((social) => {
           return (
@@ -50,7 +50,7 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         <SocialIcon
-          url="http://localhost:3000/#contact"
+          url="https://satyamchaurasia.vercel.app/#contact"
           className="cursor-pointer"
           network="email"
           fgColor="gray"
@@ -64,9 +64,9 @@ export default function Header({ socials }: Props) {
         <Link
           href="https://drive.google.com/file/d/100wAPVwfAFlfwwKFqVgSYOUKSX9hK7dT/view?usp=sharing"
           target="_blank"
-          className="mx-10"
+          className="mx-10 hidden md:inline-flex"
         >
-           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+           <p className="uppercase text-sm text-gray-400">
             Resume
           </p>
         </Link>

@@ -26,8 +26,8 @@ export default function Home({ pageInfo, experiences, projects, skills, socials 
   return (
     <div
       className="text-white bg-[rgb(36,36,36)] h-screen overflow-y-scroll 
-    overflow-x-hidden z-0 snap-y snap-mandatory scrollbar scrollbar-track-gray-400/20
-    scrollbar-thumb-[#0af7ef]/80 "
+    overflow-x-hidden z-0 snap-y snap-mandatory md:scrollbar md:scrollbar-track-gray-400/20
+    md:scrollbar-thumb-[#0af7ef]/80 "
     >
       <Head>
         <title>Satyam Chaurasia</title>
