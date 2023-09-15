@@ -9,10 +9,10 @@ type Props = {
 
 function Projects({ projects }: Props) {
   return (
-    <div
-      // initial={{ opacity: 0 }}
-      // whileInView={{ opacity: 1 }}
-      // transition={{ duration: 1.5 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
       className="flex flex-col relative h-screen text-left overflow-hidden
     max-w-full justify-evenly mx-auto items-center z-0"
     >
@@ -32,19 +32,9 @@ function Projects({ projects }: Props) {
               space-y-4 justify-center p-8 lg:p-20 md:px-28 h-full"
             >
               <img
-                // initial={{
-                //   y: -300,
-                //   opacity: 0,
-                // }}
-                // transition={{ duration: 1.2 }}
-                // whileInView={{
-                //   y: 0,
-                //   opacity: 1,
-                // }}
-                // viewport={{ once: true }}
                 src={project?.image ? urlFor(project?.image)?.url() : "/"}
                 alt=""
-                className="w-auto max-h-36 lg:max-h-40 xl:max-h-48"
+                className="w-auto max-h-36 lg:max-h-40 xl:max-h-48 hover:scale-125 transition duration-500 hover:ease-in-out"
               />
               <div className="space-y-4 px-0 md:px-10 max-w-6xl">
                 <h4 className="text-2xl lg:text-4xl font-semibold text-center">
@@ -74,7 +64,7 @@ function Projects({ projects }: Props) {
         })}
       </div>
       <div className="w-full absolute top-[30%] bg-[#0af7ef]/10 left-0 h-[500px] skew-y-12"></div>
-    </div>
+    </motion.div>
   );
 }
 

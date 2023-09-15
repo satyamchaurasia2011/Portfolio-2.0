@@ -8,12 +8,12 @@ type Props = {
 
 function WorkExperience({experiences}: Props) {
   return (
-    <div
-      // initial={{
-      //   opacity: 0,
-      // }}
-      // whileInView={{ opacity: 1 }}
-      // transition={{duration : 1.5}}
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{ opacity: 1 }}
+      transition={{duration : 1.5}}
       className="h-screen flex flex-col items-center justify-evenly relative
      overflow-hidden text-left md:flex-row mx-auto max-w-7xl px-3 md:px-10"
     >
@@ -28,7 +28,7 @@ function WorkExperience({experiences}: Props) {
           })
         }
       </div>
-    </div>
+    </motion.div>
   );
 }
 

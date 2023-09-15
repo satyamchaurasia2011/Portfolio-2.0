@@ -8,10 +8,10 @@ type Props = {
 
 export default function Skills({skills}: Props) {
   return (
-    <div
-      // initial={{opacity: 0}}
-      // whileInView={{opacity: 1}}
-      // transition={{duration: 1.5}}
+    <motion.div
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      transition={{duration: 1.5}}
       className="flex flex-col relative h-screen text-center md:text-left xl:flex-row overflow-hidden
     max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
@@ -21,10 +21,10 @@ export default function Skills({skills}: Props) {
       <div className="grid grid-cols-4 gap-4 md:gap-6 pt-36">
         {
           skills?.map((skill, index) => {
-           return  <Skill key={skill._id} skill = {skill} directionLeft = {index <= Math.round(skills.length/2)}/>
+           return  <Skill key={skill._id} skill = {skill} directionLeft = {index < Math.round(skills.length/2)}/>
           })
         }
       </div>
-    </div>
+    </motion.div>
   );
 }

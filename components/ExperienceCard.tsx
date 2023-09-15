@@ -11,16 +11,16 @@ function ExperienceCard({ experience }: Props) {
     <article
       className="flex flex-col items-center rounded-lg space-y-3 flex-shrink-0
     w-fit md:w-[600px]  snap-center bg-[#292929] pt-8 px-4 md:px-8 md:-mb-8
-    hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden"
+    lg:hover:opacity-100 lg:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden"
     >
-      <img
-        // initial={{
-        //   y: -100,
-        //   opacity: 0,
-        // }}
-        // transition={{ duration: 1.2 }}
-        // whileInView={{ y: 0, opacity: 1 }}
-        // viewport={{ once: true }}
+      <motion.img
+        initial={{
+          y: -100,
+          opacity: 0,
+        }}
+        transition={{ duration: 1.2 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
         className="w-24 h-24 rounded-full object-contain"
         src={urlFor(experience.companyImage).url()}
         alt=""
