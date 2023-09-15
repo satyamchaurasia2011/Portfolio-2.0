@@ -10,14 +10,14 @@ type Props = {
 function Skill({ directionLeft, skill }: Props) {
   return (
     <div className="group relative flex cursor-pointer ">
-      <motion.img
-        initial = {{
-            x : directionLeft ? -200 : 200,
-            opacity: 0
-        }}
-        whileInView = {{opacity: 1, x: 0}}
-        transition={{duration: 1}}
-        viewport={{ once: true }}
+      <img
+        // initial = {{
+        //     x : directionLeft ? -200 : 200,
+        //     opacity: 0
+        // }}
+        // whileInView = {{opacity: 1, x: 0}}
+        // transition={{duration: 1}}
+        // viewport={{ once: true }}
         src={urlFor(skill.image).url()}
         className="rounded-full border h-16 w-16 md:w-20 md:h-20 lg:w-24 lg:h-24 border-gray-500 object-contain p-2
         xl:w-[6rem] xl:h-[6rem] filter group-hover:grayscale transition duration-300 ease-in-out"
