@@ -15,16 +15,16 @@ export default function About({ pageInfo }: Props) {
       <h3 className="absolute top-24 uppercase tracking-[16px] text-gray-500 text-2xl">
         About
       </h3>
-      <img
-        // initial={{
-        //   x: -200,
-        //   opacity: 0,
-        // }}
-        // transition={{
-        //   duration: 1.2,
-        // }}
-        // whileInView={{ opacity: 1, x: 0 }}
-        // viewport={{ once: true }}
+      <motion.img
+        initial={{
+          x: -200,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 1.2,
+        }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         src={urlFor(pageInfo?.profilePic).url()}
         alt="pic"
         className="mt-28 -mb-4 md:mb-0 flex-shrink-0 w-48 h-48 object-cover 
