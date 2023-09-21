@@ -7,6 +7,7 @@ type Props = {
 };
 
 function WorkExperience({experiences}: Props) {
+  const sortedExp  = experiences?.sort((a:Experience,b:Experience) => (Number(new Date(b.dateStarted)) - Number(new Date(a.dateStarted))))
   return (
     <motion.div
       initial={{
@@ -23,7 +24,7 @@ function WorkExperience({experiences}: Props) {
       <div className=" w-full flex space-x-5  overflow-x-scroll scrollbar-track-gray-400/20
     scrollbar-thumb-[#0af7ef]/80 scrollbar-thin p-2 md:p-10 snap-x snap-mandatory mt-20">
         {
-          experiences?.map(experience => {
+          sortedExp?.map(experience => {
             return <ExperienceCard key={experience._id} experience={experience}/>
           })
         }
