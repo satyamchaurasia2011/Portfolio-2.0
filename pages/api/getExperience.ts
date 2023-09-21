@@ -17,7 +17,8 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
   ) {
-    const experiences: Experience[] = await sanityClient.fetch(query)
+    let experiences: Experience[] = await sanityClient.fetch(query)
+    experiences = experiences.sort((a:Experience,b:Experience) => (Number(new Date(b.dateStarted)) - Number(new Date(a.dateStarted))))
     res.status(200).json({ experiences })
   }
    

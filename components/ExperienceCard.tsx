@@ -43,7 +43,7 @@ function ExperienceCard({ experience }: Props) {
         <p className="uppercase p-2 md:py-5 text-gray-300">
           {experience.dateStarted} - {experience.dateEnded}
         </p>
-        <ul className="list-disc space-y-3 ml-4 md:ml-8 text-[13px] md:text-[17px] h-40">
+        <ul className="list-disc space-y-3 ml-4 md:ml-8 text-[13px] md:text-[15px] h-40">
           {experience?.points?.map((point, index) => {
             return <li key={index}>{point}</li>;
           })}
