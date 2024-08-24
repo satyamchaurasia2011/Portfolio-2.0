@@ -26,7 +26,7 @@ function ExperienceCard({ experience }: Props) {
         alt=""
       />
       <div className="px-0 md:px-4">
-        <h4 className="text-xl md:text-3xl font-light">{experience.jobTitle} (Intern)</h4>
+        <h4 className="text-xl md:text-3xl font-light">{experience.jobTitle}</h4>
         <p className="text-lg md:text-xl font-bold mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2">
           {experience?.technologies.map((technology) => {
@@ -41,7 +41,7 @@ function ExperienceCard({ experience }: Props) {
           })}
         </div>
         <p className="uppercase p-2 md:py-5 text-gray-300">
-          {experience.dateStarted} - {experience.dateEnded}
+          {experience.dateStarted} - {experience.dateEnded ? experience.dateEnded : "Present"}
         </p>
         <ul className="list-disc space-y-3 ml-4 md:ml-8 text-[13px] md:text-[15px] h-40">
           {experience?.points?.map((point, index) => {

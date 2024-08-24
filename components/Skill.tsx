@@ -20,11 +20,11 @@ function Skill({ directionLeft, skill }: Props) {
         // viewport={{ once: true }}
         src={urlFor(skill.image).url()}
         className="rounded-full border h-16 w-16 md:w-20 md:h-20 lg:w-24 lg:h-24 border-gray-500 object-contain p-2
-        xl:w-[6rem] xl:h-[6rem] filter group-hover:grayscale transition duration-300 ease-in-out"
+        xl:w-[5rem] xl:h-[5rem] filter group-hover:grayscale transition duration-300 ease-in-out"
       />
       <div
         className="absolute opacity-0 group-hover:opacity-80 transition duration-300 first-letter 
-        ease-in-out group-hover:bg-gray-300 h-16 w-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-[6rem] xl:h-[6rem] rounded-full z-0"
+        ease-in-out group-hover:bg-gray-300 h-16 w-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-[5rem] xl:h-[5rem] rounded-full z-0"
       >
         <div className="flex justify-center items-center h-full">
           <p className="text-lg text-center md:text-2xl  font-bold text-black opacity-100">
